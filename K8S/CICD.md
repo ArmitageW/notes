@@ -18,9 +18,13 @@
 
 如下图所示，这种发布方式比较简单粗暴，有点像我们传统的软件升级方式，主要靠手工完成，先将老版本 V1 全部下掉，再将新版本发到机器上去。这种方式会引入服务中断（停机），在开发测试环境是可行的，但对于生产环境发布，其会直接影响用户的使用体验，这种方式一般是不建议的。
 
-![600](http://cdn.pic1.54php.cn/20180410/3bac4740b601ded9ad68900504145ee5.jpg?imageView/2/w/600)发布前
+![600](http://cdn.pic1.54php.cn/20180410/3bac4740b601ded9ad68900504145ee5.jpg?imageView/2/w/600)
 
-![600](http://cdn.pic1.54php.cn/20180410/d4f0c5d6db0198acaa59ec09a677d8ce.jpg?imageView/2/w/600)发布后
+​                                                                                           发布前
+
+![600](http://cdn.pic1.54php.cn/20180410/d4f0c5d6db0198acaa59ec09a677d8ce.jpg?imageView/2/w/600)
+
+​                                                                                           发布后
 
  优势和适用场合
 
@@ -48,11 +52,17 @@
 
 在蛮力发布基础上的一种简单改进发布方式，目前仍然是不少成长型技术组织的主流发布方式。单服务器组下的金丝雀发布的简化步骤如下图所示：
 
-![600](http://cdn.pic1.54php.cn/20180410/3bac4740b601ded9ad68900504145ee5.jpg?imageView/2/w/600)发布前
+![600](http://cdn.pic1.54php.cn/20180410/3bac4740b601ded9ad68900504145ee5.jpg?imageView/2/w/600)
 
-![600](http://cdn.pic1.54php.cn/20180410/086080916474e08a00e74121ce1c5d24.jpg?imageView/2/w/600)先发一台金丝雀
+​                                                                                          发布前
 
-![600](http://cdn.pic1.54php.cn/20180410/d4f0c5d6db0198acaa59ec09a677d8ce.jpg?imageView/2/w/600)全部发完
+![600](http://cdn.pic1.54php.cn/20180410/086080916474e08a00e74121ce1c5d24.jpg?imageView/2/w/600)
+
+​                                                                                   先发一台金丝雀
+
+![600](http://cdn.pic1.54php.cn/20180410/d4f0c5d6db0198acaa59ec09a677d8ce.jpg?imageView/2/w/600)
+
+​                                                                                         全部发完
 
  实践要点
 
@@ -85,19 +95,21 @@
 
 在金丝雀发布基础上的进一步优化改进，是一种自动化程度较高的发布方式，用户体验比较平滑，是目前成熟型技术组织所采用的主流发布方式。单服务器组下的滚动发布的简化步骤如下图所示：
 
-![600](http://cdn.pic1.54php.cn/20180410/48cd01e31f99fa056f0430755ad5bc7b.jpg?imageView/2/w/600)发布前
+![600](http://cdn.pic1.54php.cn/20180410/48cd01e31f99fa056f0430755ad5bc7b.jpg?imageView/2/w/600)
+
+​                                                                                            发布前
 
 ![600](http://cdn.pic1.54php.cn/20180410/e865254d90655a700742d82bad1107d5.jpg?imageView/2/w/600)
 
-发布中，先发一台金丝雀
+​                                                                             发布中，先发一台金丝雀
 
 ![600](http://cdn.pic1.54php.cn/20180410/e518161be0fd73e4a3a5f82e17df2563.jpg?imageView/2/w/600)
 
-发布中，再发若干台
+​                                                                               发布中，再发若干台
 
 ![600](http://cdn.pic1.54php.cn/20180410/2b058a6b9e5136c7deefc0c33af55721.jpg?imageView/2/w/600)
 
-直到全部发完
+​                                                                                      直到全部发完
 
  实践要点
 
