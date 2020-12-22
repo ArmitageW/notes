@@ -90,3 +90,36 @@ ip route add from 192.168.3.0/24 table 10
 
 
 
+## mount
+
+```shell
+#命令格式：
+mount [-t vfstype] [-o options] device dir
+#-t :指定文件系统的类型，通常不必指定，mount 会自动选择正确的类型。
+#光盘或光盘镜像：iso9660 
+#DOS fat16文件系统：msdos 
+#Windows 9x fat32文件系统：vfat 
+#Windows NT ntfs文件系统：ntfs 
+#Mount Windows文件网络共享：smbfs 
+#UNIX(LINUX) 文件网络共享：nfs
+
+#-o options 主要用来描述设备或档案的挂接方式。
+#loop：用来把一个文件当成硬盘分区挂接上系统 
+#ro：采用只读方式挂接设备 
+#rw：采用读写方式挂接设备 
+#iocharset：指定访问文件系统所用字符集
+
+mount -t nfs -o vers=3 10.10.10.10:/wangyijun_dev_01 /storage
+```
+
+
+
+## 查看踢出登录用户：
+
+执行who命令，查看有哪些用户已登录到当前主机：
+
+执行pkill命令，强制用户下线
+
+pkill [-SIGNAL] [-u 用户名] [-t 虚拟终端名]
+
+![image-20201217142823054](Linux 命令.assets/image-20201217142823054.png)
